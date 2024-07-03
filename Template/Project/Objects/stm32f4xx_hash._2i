@@ -1,0 +1,6 @@
+--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\STM32F4_FWLIB\src -I ..\STM32F4_FWLIB\inc -I ..\Main -I ..\USER\LED -I ..\Startup_config -I ..\Common -I ..\FreeRTOS\include -I ..\FreeRTOS\port\RVDS\ARM_CM4F -I ..\LwIP\include -I ..\LwIP\include\compat -I ..\LwIP\include\lwip -I ..\LwIP\include\netif -I ..\LwIP\include\lwip\apps -I ..\LwIP\include\lwip\priv -I ..\LwIP\include\lwip\prot -I ..\Main\arch -I ..\STM32F4x7_ETH_Driver\inc -I ..\USER
+-I.\RTE\_Target_1
+-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+-ID:\Keil_v5\ARM\CMSIS\Include
+-D__UVISION_VERSION="530" -DSTM32F407xx -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER
+-o .\objects\stm32f4xx_hash.o --omf_browse .\objects\stm32f4xx_hash.crf --depend .\objects\stm32f4xx_hash.d --feedback ".\Objects\Template_YZL.fed" "..\STM32F4_FWLIB\src\stm32f4xx_hash.c"
