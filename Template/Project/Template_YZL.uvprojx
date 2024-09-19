@@ -498,6 +498,16 @@
               <FileType>5</FileType>
               <FilePath>..\USER\BaseDriver\user_updata.h</FilePath>
             </File>
+            <File>
+              <FileName>user_rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\USER\BaseDriver\user_rtc.c</FilePath>
+            </File>
+            <File>
+              <FileName>user_rtc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\USER\BaseDriver\user_rtc.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

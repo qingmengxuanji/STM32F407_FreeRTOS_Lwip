@@ -33,8 +33,9 @@ struct ETH_TYPE_REG
 
 struct SYS_CTRL
 {
-  struct ETH_TYPE_REG Ethernet;
+    struct ETH_TYPE_REG Ethernet;
 };
+
 extern struct SYS_CTRL SysCtrl;
 
 struct TIMER_REG
@@ -45,8 +46,9 @@ struct TIMER_REG
     uint8_t Day;
     uint8_t Momth;
     uint8_t Year;
-	  uint8_t  LastSecond;
-	  uint8_t  LastMinute;
+    uint8_t  LastSecond;
+    uint8_t  LastMinute;
 };
+
 #endif
 

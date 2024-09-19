@@ -9,6 +9,7 @@
 ".\objects\user_systype.o"
 ".\objects\user_rcc_config.o"
 ".\objects\user_updata.o"
+".\objects\user_rtc.o"
 ".\objects\segger_rtt_printf.o"
 ".\objects\segger_rtt.o"
 ".\objects\api_lib.o"

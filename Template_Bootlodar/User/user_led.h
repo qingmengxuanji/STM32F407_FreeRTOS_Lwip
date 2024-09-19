@@ -14,6 +14,6 @@
 #define LED4_OFF  GPIO_ResetBits(GPIOA , GPIO_Pin_1);
 
 //函数声明
-void LED_Init(void);//初始化	
+void LED_Init(void);//初始化
 
 #endif

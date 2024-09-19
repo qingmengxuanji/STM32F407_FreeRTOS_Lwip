@@ -16,19 +16,19 @@ STM32F4
 
 扇区8				0x0808 0000 - 0x0809 FFFF			128KB			//UPDATA SAVE
 扇区9				0x080A 0000 – 0x080B FFFF			128KB			//UPDATA SAVE
-扇区10			0x080C 0000 - 0x080D FFFF		  128KB			
-扇区11			0x080E 0000 – 0x080F FFFF	  	128KB			
+扇区10				0x080C 0000 - 0x080D FFFF		  	128KB
+扇区11				0x080E 0000 – 0x080F FFFF	  		128KB
 
 */
-#define APP_Offset   0x10000                          //中断向量表偏移量
-#define App_Address (0x08000000 + 0x10000)            // App起始地址    0x08010000
+#define APP_Offset   0x20000                          //中断向量表偏移量
+#define App_Address (0x08000000 + 0x20000)            // App起始地址    0x08010000
 #define Flag_Address (0x08000000 + 0xC000)            // 更新程序标志   0x0800C000  --> 扇区3
-#define Updata_Program_Address (0x08000000 + 0x40000) // 更新程序放置   0x08040000  --> 扇区6
+#define Updata_Program_Address (0x08000000 + 0x60000) // 更新程序放置   0x08040000  --> 扇区6
 
-#define Backdata_Program_Address (0x08000000 + 0x80000) // 备份原先的程序放置
+#define Backdata_Program_Address (0x08000000 + 0xA0000) // 备份原先的程序放置
 
-#define Updata_Program_SECTOR_1 FLASH_Sector_6     //扇区6
-#define Updata_Program_SECTOR_2 FLASH_Sector_7     //扇区7
+#define Updata_Program_SECTOR_1 FLASH_Sector_7     //扇区7
+#define Updata_Program_SECTOR_2 FLASH_Sector_8     //扇区8
 #define Flag_SECTOR             FLASH_Sector_3     //扇区3
 
 void Erase_Updata_Program_Area(void);

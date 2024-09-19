@@ -6,19 +6,19 @@
 //void ETH_GPIO_Config(void);
 //static void ETH_MACDMA_Config(void);
 #ifdef __cplusplus
- extern "C" {
+extern "C" {
 #endif
 
 #define MII_MODE	1
 
 /* Uncomment the define below to clock the PHY from external 25MHz crystal (only for MII mode) */
 #ifdef 	MII_MODE
- #define PHY_CLOCK_MCO
+#define PHY_CLOCK_MCO
 #endif
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
-#define DP83848_PHY_ADDRESS       0x01 
+#define DP83848_PHY_ADDRESS       0x01
 
 #define LAN8720_PHY_ADDRESS     	0x00				//LAN8720 PHY–æ∆¨µÿ÷∑.
 
@@ -26,7 +26,7 @@
 #define ETH_LINK_EXTI_LINE             EXTI_Line14
 #define ETH_LINK_EXTI_PORT_SOURCE      EXTI_PortSourceGPIOB
 #define ETH_LINK_EXTI_PIN_SOURCE       EXTI_PinSource14
-#define ETH_LINK_EXTI_IRQn             EXTI15_10_IRQn 
+#define ETH_LINK_EXTI_IRQn             EXTI15_10_IRQn
 /* PB14 */
 #define ETH_LINK_PIN                   GPIO_Pin_14
 #define ETH_LINK_GPIO_PORT             GPIOB
@@ -49,7 +49,8 @@ void ETH_NVIC_Config(void);
 
 #ifdef __cplusplus
 }
+
 #endif
 
 
-#endif 
+#endif

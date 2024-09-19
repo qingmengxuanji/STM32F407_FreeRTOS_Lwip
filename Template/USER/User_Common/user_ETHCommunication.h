@@ -7,12 +7,12 @@
 extern struct netconn *remote_netconn;
 /***************************************************************************
 ****************************************************************************/
-#define PC_CMD_MAX (sizeof(CMD_Assemble) / sizeof(CMD_Type)) 
+#define PC_CMD_MAX (sizeof(CMD_Assemble) / sizeof(CMD_Type))
 
 typedef struct CMD_TYPE
 {
-	char *CMD_String;					               
-	void (*Run_Function)(void *parameter);  
+    char *CMD_String;
+    void (*Run_Function)(void *parameter);
 } CMD_Type;
 
 extern void EthernetReceiveSuccess(uint32_t ParameterLen, uint16_t *Send);

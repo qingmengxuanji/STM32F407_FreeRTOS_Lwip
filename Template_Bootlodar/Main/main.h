@@ -17,15 +17,15 @@
 
 //#define USER_JLINK
 #ifdef USER_JLINK
-#include "SEGGER_RTT.h"
-#include "SEGGER_SYSVIEW.h"
+    #include "SEGGER_RTT.h"
+    #include "SEGGER_SYSVIEW.h"
 #endif
 
-#define APP_Offset   0x10000                      //中断向量表偏移量
-#define App_Address (0x08000000 + 0x10000)			  // App起始地址
+#define APP_Offset   0x20000                          //中断向量表偏移量
+#define App_Address (0x08000000 + 0x20000)			  // App起始地址
 #define Flag_Address (0x08000000 + 0xC000)			  // 更新程序标志
-#define Updata_Program_Address (0x08000000 + 0x40000) // 更新程序放置
-#define Backdata_Program_Address (0x08000000 + 0x80000) // 备份原先的程序放置
+#define Updata_Program_Address (0x08000000 + 0x60000) // 更新程序放置
+#define Backdata_Program_Address (0x08000000 + 0xA0000) // 备份原先的程序放置
 
 #define App_SIZE (0x2FFFF)			  // 字节
 #define Updata_Program_SIZE (0x2FFFF) // 字节,直接全部写入
@@ -34,14 +34,14 @@
 
 #define Flag_SECTOR  FLASH_Sector_3
 
-#define App_SECTOR_1 FLASH_Sector_4
-#define App_SECTOR_2 FLASH_Sector_5
+#define App_SECTOR_1 FLASH_Sector_5
+#define App_SECTOR_2 FLASH_Sector_6
 
-#define Updata_Program_SECTOR_1 FLASH_Sector_6
-#define Updata_Program_SECTOR_2 FLASH_Sector_7
+#define Updata_Program_SECTOR_1 FLASH_Sector_7
+#define Updata_Program_SECTOR_2 FLASH_Sector_8
 
-#define Backdata_Program_SECTOR_1 FLASH_Sector_8
-#define Backdata_Program_SECTOR_2 FLASH_Sector_9
+#define Backdata_Program_SECTOR_1 FLASH_Sector_9
+#define Backdata_Program_SECTOR_2 FLASH_Sector_10
 
 
 bool Check_Flag(uint32_t flag_add);
@@ -52,7 +52,7 @@ void Program_Updata(uint32_t app_add, uint32_t updata_program_add, uint32_t size
 bool Check_Program(uint32_t app_add, uint32_t updata_program_add, uint32_t size);
 void Go_to_App(uint32_t app_add);
 void Reset_Updata_Flag(void);
-void Force_Set_Flag(void); 
+void Force_Set_Flag(void);
 
 #endif /* __MAIN_H */
 

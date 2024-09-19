@@ -72,7 +72,7 @@ void AppTaskCreate(void *p)
 	
 	ETH_BSP_Config();
 	TCPIP_Init();				   // LWIP初始化
-	TCP_Server_Init();	 // 接收线程初始化
+	TCP_Server_Init();			   // 接收线程初始化
 
 
   /* 创建LED_Task任务 */
